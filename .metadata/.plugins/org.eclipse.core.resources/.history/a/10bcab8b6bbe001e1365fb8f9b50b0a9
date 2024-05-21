@@ -1,0 +1,80 @@
+/**
+ * string 1-1abcrt16
+ *o/p- weak
+
+ *string 2- 7f4d5hsre
+ *o/p strong 
+
+ *explanation- if a given string contains alphabets in continuity ex-abc it is a small 
+ *if a given string contains alphabets in non continuity7f4d5hsre strong
+ */
+//package strings;
+//public class string20 {
+//	public static void main(String []args)
+//	{
+//		String s1="7f4d5hsre";
+//		boolean b=true;
+//		for(int i=0;i<s1.length()-2;i++)
+//		{
+//			char  cc=s1.charAt(i);
+//			if(s1.charAt(i+1)==cc+1&&s1.charAt(i+2)==cc+2)
+//			{
+//				b=false;
+//				
+//			}
+//		}
+//		System.out.println(b);
+//	}
+//
+//}
+
+
+public class string20{
+    public static void main(String[] args)
+    {
+        String s1 = "7f4d5hsre";
+        boolean flag = false;
+
+        for (int i = 0; i < s1.length() - 2; i++) {
+            char currentC1 = s1.charAt(i);
+
+            if (s1.charAt(i + 1) == currentC1 + 1 && s1.charAt(i + 2) == currentC1 + 2) {
+                flag= true;
+                break;
+            }
+        }
+
+        System.out.println(flag);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

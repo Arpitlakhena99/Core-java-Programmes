@@ -1,0 +1,16 @@
+package arrays;
+
+public class array3 {
+		static void test(int x)
+		{
+		x=20;
+		System.out.println(x);
+		}
+			public static void main(String[]args)
+			{
+			int x=10;
+			test(x);
+			System.out.println(x);
+			}
+			
+			}

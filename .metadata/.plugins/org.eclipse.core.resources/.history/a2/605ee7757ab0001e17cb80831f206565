@@ -1,0 +1,11 @@
+package arrays;
+
+public class Arraydemo {
+	public static void main(String[]args)
+	{
+		//datatype arrayname= new datatype[size];
+		
+		int[] arr= new int[5];
+	}
+
+}

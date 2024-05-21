@@ -1,0 +1,42 @@
+package strings;
+
+public class string20 {
+	    public static void main(String[] args) {
+	        String s1 = "1abcrt16";
+	        String s2= "7f4d5hsre";
+
+	        boolean isConsecutive1 = false;
+	        for (int i = 0; i < s1.length() - 2; i++) {
+	            char currentChar = s1.charAt(i);
+	            char nextChar = s1.charAt(i + 1);
+	            char nextToNextChar = s1.charAt(i + 2);
+	            
+	            
+	            if (Character.isLetter(currentChar) && Character.isLetter(nextChar) && Character.isLetter(nextToNextChar)
+	                    && nextChar - currentChar == 1 && nextToNextChar - nextChar == 1) {
+	                isConsecutive1 = true;
+	                break;
+	            }
+	        }
+
+	        String result1 = isConsecutive1 ? "weak" : "strong";
+	        System.out.println("String 1: " + result1);
+
+	        boolean isConsecutive2 = false;
+	        for (int i = 0; i < s2.length() - 2; i++) {
+	            char currentChar = s2.charAt(i);
+	            char nextChar = s2.charAt(i + 1);
+	            char nextToNextChar = s2.charAt(i + 2);
+	            if (Character.isLetter(currentChar) && Character.isLetter(nextChar) && Character.isLetter(nextToNextChar)
+	                    && nextChar - currentChar == 1 && nextToNextChar - nextChar == 1) {
+	                isConsecutive2 = true;
+	                break;
+	            }
+	        }
+	        String result2 = isConsecutive2 ? "weak" : "strong";
+	        System.out.println("String 2: " + result2);
+	    }
+	}
+
+
+}

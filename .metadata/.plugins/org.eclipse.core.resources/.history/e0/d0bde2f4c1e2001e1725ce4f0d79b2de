@@ -1,0 +1,36 @@
+package filehandling;
+
+import java.io.EOFException;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+
+public class Main {
+	public static void main(String[] args) {
+ Person[] people ={ new Person("Arpit", 25, "Male"),
+				new Person("Manan", 23,"Male"),
+				new Person("Mouneesh",25,"Male")
+		};
+
+		try (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream("demo.txt"))) {
+			for (Person person : people) {
+				outputStream.writeObject(person);
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream("demo.txt"))) {
+			Object object;
+			while ((object = inputStream.readObject()) != null) {
+				Person person = (Person) object;
+				System.out.println(person);
+			}
+		} catch (EOFException e) {
+		} catch (IOException | ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+}

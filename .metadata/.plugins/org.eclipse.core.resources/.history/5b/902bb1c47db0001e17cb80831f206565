@@ -1,0 +1,14 @@
+package arrays;
+
+public class array3 {
+		static void test(int []arr)
+		{
+		
+		}
+		public static void main(String[]args)
+		{
+		int[] arr= new int[5];
+		test(arr);
+			}
+			
+			}
